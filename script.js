@@ -1,9 +1,17 @@
+var age ;
+var taille ;
+var poids ;
+var imc ;
 function yourAge () {
-  var age = document.getElementById('age').value;
+  age = document.getElementById('age').value;
 }
 function yourHeight () {
-  var taille = document.getElementById('taille').value;
+  taille = document.getElementById('taille').value;
 }
 function yourWeight () {
-  var poids = document.getElementById('poids').value;
+ poids = document.getElementById('poids').value;
+}
+function calculImc() {
+  imc = Math.round(poids / ((taille/100)* (taille/100)));
+  document.getElementById('imc').innerHTML = imc;
 }

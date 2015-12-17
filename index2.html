@@ -5,12 +5,12 @@
       <title>.</title>
       <link rel="icon" type="img/png" href=""/>
       <link rel="stylesheet" type ="text/css" href="css/stylesheet.css"/>
-      <script> type="text/javascript" src="script.js"</script>
+      <script src="script.js"></script>
       </head>
         <body>
           <div id="contain">
             <form>Selectionnez votre age :
-              <select id="age" onchange="yourAge">
+              <select id="age" onchange="yourAge()">
               <option>10</option>
               <option>11</option>
               <option>12</option>
@@ -55,12 +55,15 @@
             </select>
             </form>
             <div class="taille">
-              Saisissez votre taille (cm)<input id="taille" type="number" onchange="yourHeight"></input>
+              Saisissez votre taille <input id="taille" type="number" onchange="yourHeight()" maxlength="3"></input> cm
             </div>
             <div class="poids">
-              Saisissez votre poids (kg)<input id="poids" type="number" onchange="yourWeight"></input>
+              Saisissez votre poids <input id="poids" type="number" onchange="yourWeight()" maxlength="3"></input> kg
             </div>
-
+            <div class="imc">
+            <button onclick="calculImc()">Calculer votre IMC</button>
+            <p id="imc"><p>
+          </div>
 
 
           </div>
